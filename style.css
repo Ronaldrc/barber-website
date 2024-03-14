@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-size: 12px; /* This can be adjusted based on design requirements */
+}
+
+.topbar {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Change as needed */
+    padding: 1vw; /* Scales with window width */
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it's above other content */
+}
+
+.logo img {
+    height: 3rem; /* Adjust based on your logo's size */
+}
+
+.topbar-nav {
+    display: flex;
+    justify-content: space-evenly; /* Ensures equal spacing */
+    width: 100%;
+    font-size: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px; /* Space between nav links */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #747474; /* Change for hover effect */
+}
+
+/* Sections styling */
+div[id] {
+    height: 100vh;
+    padding: 20px;
+    border: 0px solid #ccc; /* For visual separation, can be removed */
+}
+
+#home {
+    background: url('pexels-forest-trees.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Ensuring text is visible on dark backgrounds, adjust as necessary */
+    font-size: 3rem;
+    text-align: center;
+}
+
+.centered-text h1 {
+  margin: 0; /* Removes default margin from h1 and h2 */
+  padding: 0.5vh 0; /* Adds a little vertical spacing */
+  color: inherit; /* Inherits color from parent, for customization */
+}
+
+/* Additional styling for aesthetics */
+.centered-text h1 {
+  font-size: 4.2rem;
+}
+
+/* Container for the progress bar */
+.progress-container {
+    width: 4px; /* Width of the progress bar */
+    height: 50%; /* Adjusted to half the height of the viewport */
+    position: fixed; /* Stick to the right side */
+    top: 25%; /* Start from 25% from the top to center it vertically */
+    right: 10px; /* Shifted a little to the left from the right side */
+    background-color: #ccc; /* Background color */
+    z-index: 99; /* Ensure it's above other content */
+    overflow: hidden;
+}
+  
+/* The actual progress bar */
+.progress-bar {
+    height: 0%; /* Initial height */
+    width: 100%; /* Full width of the container */
+    background-color: #4CAF50; /* Color of the progress bar */
+}
+
+footer {
+    text-align: center; /* Centers text */
+    width: 100%; /* Ensures the footer spans the full width of the page */
+    padding: 20px 0; /* Adds some padding above and below the text */
+}
+  
+.footer-content {
+    display: inline-block; /* Allows for text alignment */
+}
