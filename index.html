@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profession Barber - Name</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="topbar">
@@ -13,9 +14,9 @@
         </div>
         <nav class="topbar-nav">
           <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
           <a href="#services" class="nav-link">Services</a>
           <a href="#gallery" class="nav-link">Gallery</a>
-          <a href="#about" class="nav-link">About</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
       </div>
@@ -32,32 +33,10 @@
             <h1>Name goes here</h1>
         </div>
       </div>
+      <div id="about">About Section</div>
       <div id="services">Services Section</div>
       <div id="gallery">Gallery Section</div>
-      <div id="about">About Section</div>
       <div id="contact">Contact Section</div>
-      <script>
-      // Optional JavaScript for smooth scrolling for browsers that do not support scroll-behavior in CSS
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-      </script>
-      <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {myFunction()};
-
-        function myFunction() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("myBar").style.height = scrolled + "%";
-        }
-      </script>
 </body>
 
 <!-- Footer for copyright notice -->
