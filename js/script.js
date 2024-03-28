@@ -17,12 +17,3 @@ function createScrollSlider() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.height = scrolled + "%";
 }
-
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-  var nav = document.querySelector('.topbar-nav');
-  if (nav.style.display === 'block') {
-      nav.style.display = 'none';
-  } else {
-      nav.style.display = 'block';
-  }
-});
