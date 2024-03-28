@@ -20,16 +20,25 @@ body, html {
     z-index: 1000; /* Ensures it's above other content */
 }
 
-.logo img {
-    height: 3rem; /* Adjust based on your logo's size */
-}
-
 .topbar-nav {
+    overflow: hidden;
     display: flex;
     justify-content: space-evenly; /* Ensures equal spacing */
     width: 100%;
     font-size: 2rem;
 }
+
+/* Hides the .topbar-nav on smaller screens */
+@media screen and (max-width: 768px) { /* You can adjust this value as needed */
+    .topbar-nav {
+      display: none;
+    }
+}
+
+.logo img {
+    height: 3rem; /* Adjust based on your logo's size */
+}
+
 
 .nav-link {
     text-decoration: none;

@@ -8,12 +8,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+// When the user scrolls the page, execute createScrollSlider
+window.onscroll = function() {createScrollSlider()};
 
-function myFunction() {
-var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-var scrolled = (winScroll / height) * 100;
-document.getElementById("myBar").style.height = scrolled + "%";
+function createScrollSlider() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.height = scrolled + "%";
 }
+
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  var nav = document.querySelector('.topbar-nav');
+  if (nav.style.display === 'block') {
+      nav.style.display = 'none';
+  } else {
+      nav.style.display = 'block';
+  }
+});
