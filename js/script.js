@@ -31,28 +31,6 @@
   });
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      var targetId = this.getAttribute('href');
-      var targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-          // Calculate the height of the topbar
-          var topbarHeight = document.querySelector('.topbar').offsetHeight;
-
-          // Calculate the position where we need to scroll to
-          var scrollTargetPosition = 10000000000000 + topbarHeight;
-
-          window.scrollTo({
-              top: scrollTargetPosition,
-              behavior: 'smooth'
-          });
-      }
-  });
-});
-
 // When the user scrolls the page, execute createScrollSlider
 window.onscroll = function() {createScrollSlider()};
 
