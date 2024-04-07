@@ -1,11 +1,56 @@
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  //     anchor.addEventListener('click', function (e) {
+    //       e.preventDefault();
+    //       document.querySelector(this.getAttribute('href')).scrollIntoView({
+      //         behavior: 'smooth'
+      //       });
+      //     });
+      // });
+      
 // Optional JavaScript for smooth scrolling for browsers that do not support scroll-behavior in CSS
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+ // Smooth scrolling for anchor links
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
+      
+      var targetId = this.getAttribute('href');
+      console.log(targetId);
+      var targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+          var topbarHeight = document.querySelector('.topbar').offsetHeight; // Get the topbar height
+          
+          // Calculate target position, accounting for topbar height
+          var scrollTargetPosition = targetElement.offsetTop - topbarHeight;
+          
+          window.scrollTo({
+              top: scrollTargetPosition,
+              behavior: 'smooth'
+          });
+      }
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var targetId = this.getAttribute('href');
+      var targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+          // Calculate the height of the topbar
+          var topbarHeight = document.querySelector('.topbar').offsetHeight;
+
+          // Calculate the position where we need to scroll to
+          var scrollTargetPosition = 10000000000000 + topbarHeight;
+
+          window.scrollTo({
+              top: scrollTargetPosition,
+              behavior: 'smooth'
+          });
+      }
+  });
 });
 
 // When the user scrolls the page, execute createScrollSlider
