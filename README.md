@@ -1,2 +1,2 @@
 # barber-website
-Get haircuts from one of the best barbers in New England!
+Website highlighting haircuts from the best barber in New England!
