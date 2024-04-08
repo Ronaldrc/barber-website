@@ -5,6 +5,10 @@ body, html {
     font-size: 12px; /* This can be adjusted based on design requirements */
 }
 
+h1 {
+    font-size: 8rem;
+}
+
 .topbar {
     top: 0;
     display: flex;
@@ -110,7 +114,9 @@ div[id] {
     align-items: center;
     color: #ff8800; /* Ensuring text is visible on dark backgrounds, adjust as necessary */
     font-size: 3rem;
+    font-family: sans-serif;
     text-align: center;
+    text-shadow: 2px 2px 2px #000;
 }
 
 .centered-text h1 {
