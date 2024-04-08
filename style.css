@@ -81,6 +81,12 @@ h1 {
     /* Other styles as needed */
 }
 
+/* Adjusted to use the 'show' class */
+.topbar-nav.show {
+    display: block;
+    /* Other styles for positioning and background */
+}
+
 .hamburger.active div {
     transform: rotate(45deg);
 }
@@ -119,7 +125,7 @@ div[id] {
     font-size: 3rem;
     font-family: sans-serif;
     text-align: center;
-    text-shadow: 2px 2px 2px #000;
+    text-shadow: 3px 3px 3px #000;
 }
 
 .centered-text h1 {

@@ -21,6 +21,27 @@
   });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const topbarNav = document.getElementById('topbar-nav');
+  console.log("hamburger menu pressed");
+  hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      topbarNav.classList.toggle('show');   // Use 'show' to control the display of topbar-nav
+  });
+});
+
+
+// Display topbar once the window is enlarged
+window.addEventListener('resize', function() {
+  const topbarNav = document.getElementById('topbar-nav');
+  if (window.innerWidth >= 768) {   // Match the breakpoint from your CSS
+      topbarNav.classList.remove('show');   // Remove 'show' class that might have been added
+      // Hide hamburger menu if it was toggled
+      document.getElementById('hamburger').classList.remove('active');
+  }
+});
+
 // When the user scrolls the page, execute createScrollSlider
 // window.onscroll = function() {createScrollSlider()};
 
