@@ -24,22 +24,24 @@ h1 {
     z-index: 1000; /* Ensures it's above other content */
 }
 
+/* Hidden on small screens, appears of large screens */
 .topbar-nav {
     overflow: hidden;
     display: flex;
     justify-content: space-evenly; /* Ensures equal spacing */
     width: 100%;
-    font-size: 2rem;
+    font-size: 3em;
 }
 
+/* Appears on small screens */
 .hamburger {
-    display: none; /* Hidden by default */
+    display: none;
     cursor: pointer;
     margin-left: auto;
     flex-direction: column;
     justify-content: space-around;
-    width: 2rem; /* 32px */
-    height: 2rem; /* 32px */
+    width: 3.5rem; /* 32px */
+    height: 2.5rem; /* 32px */
     background: transparent;
     border: none;
     z-index: 10;
@@ -64,8 +66,9 @@ h1 {
     }
     .hamburger {
         display: flex;
-        margin-left: auto;
+        margin-right: auto;
     }
+    
 }
 
 /* Styles for the topbar-nav when active (mobile view) */
