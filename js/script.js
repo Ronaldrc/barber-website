@@ -21,6 +21,7 @@
   });
 });
 
+// Clicks on hamburger menu collapses dropdown menu
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.getElementById('hamburger');
   const topbarNav = document.getElementById('topbar-nav');
