@@ -6,7 +6,7 @@ body, html {
 }
 
 h1 {
-    font-size: 8rem;
+    font-size: 6rem;
 }
 
 .topbar {
@@ -29,7 +29,7 @@ h1 {
     display: flex;
     justify-content: space-evenly; /* Ensures equal spacing */
     width: 100%;
-    font-size: 3em;
+    font-size: 2.3em;
     z-index: 100;
 }
 
