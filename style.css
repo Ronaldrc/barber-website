@@ -68,7 +68,9 @@ h1 {
         display: flex;
         margin-right: auto;
     }
-    
+    h1 {
+        font-size: 4.5rem;
+    }
 }
 
 
