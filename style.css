@@ -6,7 +6,8 @@ body, html {
 }
 
 h1 {
-    font-size: 6rem;
+    font-size: 5rem;
+    margin: 10px;
 }
 
 .topbar {
@@ -14,13 +15,13 @@ h1 {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7); /* Change as needed */
-    padding: 1vw; /* Scales with window width */
+    padding: 17px;
     color: #fff;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000; /* Ensures it's above other content */
+    min-height: 20px;
+    max-height: 20px;
 }
 
 /* Hidden on small screens, appears of large screens */
@@ -28,9 +29,11 @@ h1 {
     overflow: hidden;
     display: flex;
     justify-content: space-evenly; /* Ensures equal spacing */
-    width: 100%;
-    font-size: 2.3em;
+    width: 60%;
+    font-size: 25px;
     z-index: 100;
+    padding-right: 20%;
+    padding-left: 15%;
 }
 
 /* Appears on small screens */
@@ -69,7 +72,7 @@ h1 {
         margin-right: auto;
     }
     h1 {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
 }
 
@@ -79,16 +82,11 @@ h1 {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 100%; /* Adjust based on the height of the topbar */
-    left: 0%;
 }
 
-
-/* Adjusted to use the 'show' class */
 .topbar-nav.show {
     display: flex;
     flex-direction: column;
-    /* Other styles for positioning and background */
 }
 
 .hamburger.active div {
@@ -96,7 +94,7 @@ h1 {
 }
 
 .logo img {
-    height: 4rem; /* Adjust based on your logo's size */
+    max-height: 50px;
 }
 
 .nav-link {
@@ -118,10 +116,11 @@ div[id] {
 }
 
 #home {
-    background: url('des_home_page.jpg') no-repeat center center;
+    background: url('images/des_home_page.jpg') no-repeat center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    /* background-attachment: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +133,6 @@ div[id] {
 
 .centered-text h1 {
   margin: 0; /* Removes default margin from h1 and h2 */
-  padding: 0.5vh 0; /* Adds a little vertical spacing */
   color: inherit; /* Inherits color from parent, for customization */
 }
 
