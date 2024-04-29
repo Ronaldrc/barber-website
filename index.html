@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profession Barber - Name</title>
+    <title>Deezy Clipz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="js/script.js"></script>
+    <link rel="shortcut icon" href="images/logo.ico" />
+     <!-- Material Icon CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="topbar">
         <div class="logo">
-          <img src="smiley_face.png" alt="Smiley face"> <!-- Replace 'smiley_face.png' with the official barber logo file -->
+          <img src="images/logo.svg" alt="Deezy Clipz Logo"> <!-- FIXME: Replace 'smiley_face.png' with the official barber logo file -->
         </div>
-        <nav class="topbar-nav">
+         <!-- Hamburger Menu Button -->
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="topbar-nav" id="topbar-nav">
           <a href="#home" class="nav-link">Home</a>
           <a href="#about" class="nav-link">About</a>
           <a href="#services" class="nav-link">Services</a>
@@ -22,27 +30,35 @@
       </div>
 
       <!-- Progress Bar Container -->
-        <div class="progress-container">
+        <!-- <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
-        </div>
+        </div> -->
 
       <!-- Sections -->
       <div id="home">
-        <div class="centered-text">
+        <div class="home-page-text">
             <h1>Professional Barber</h1>
-            <h1>Name goes here</h1>
+            <h1>Deezy Clipz</h1>
         </div>
       </div>
-      <div id="about">About Section</div>
-      <div id="services">Services Section</div>
-      <div id="gallery">Gallery Section</div>
-      <div id="contact">Contact Section</div>
+      <div id="about">
+        <h2>About Section</h2>
+      </div>
+      <div id="services">
+        <h2>Services Section</h2>
+      </div>
+      <div id="gallery">
+        <h2>Gallery Section</h2>
+      </div>
+      <div id="contact">
+        <h2>Contact Section</h2>
+      </div>
+      <script src="js/script.js"></script>
 </body>
-
 <!-- Footer for copyright notice -->
 <footer>
     <div class="footer-content">
-        <p>&copy; 2024 Ron Chim. All rights reserved.</p>
+        <p>&copy; 2024 Deezy Clipz. All rights reserved.</p>
     </div>
 </footer>
   

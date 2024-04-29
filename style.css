@@ -1,34 +1,100 @@
 body, html {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     font-size: 12px; /* This can be adjusted based on design requirements */
 }
 
+h1 {
+    font-size: 5rem;
+    margin: 10px;
+}
+
 .topbar {
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7); /* Change as needed */
-    padding: 1vw; /* Scales with window width */
+    padding: 17px;
     color: #fff;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000; /* Ensures it's above other content */
+    min-height: 20px;
+    max-height: 20px;
+}
+
+/* Hidden on small screens, appears of large screens */
+.topbar-nav {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly; /* Ensures equal spacing */
+    width: 60%;
+    font-size: 25px;
+    z-index: 100;
+    padding-right: 20%;
+    padding-left: 15%;
+}
+
+/* Appears on small screens */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 3.5rem; /* 32px */
+    height: 2.5rem; /* 32px */
+    background: transparent;
+    border: none;
+    z-index: 10;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 0.25rem; /* 4px */
+    background: #ffffff;
+    transition: all 0.3s linear;
+}
+
+.hamburger:hover {
+    color: #747474; /* Change for hover effect */
+}
+
+/* Hides the .topbar-nav on smaller screens */
+@media screen and (max-width: 768px) { /* You can adjust this value as needed */
+    .topbar-nav {
+      display: none;
+    }
+    .hamburger {
+        display: flex;
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+}
+
+
+/* Styles for the topbar-nav when active (mobile view) */
+.topbar-nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.topbar-nav.show {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger.active div {
+    transform: rotate(45deg);
 }
 
 .logo img {
-    height: 3rem; /* Adjust based on your logo's size */
-}
-
-.topbar-nav {
-    display: flex;
-    justify-content: space-evenly; /* Ensures equal spacing */
-    width: 100%;
-    font-size: 2rem;
+    max-height: 50px;
 }
 
 .nav-link {
@@ -50,20 +116,23 @@ div[id] {
 }
 
 #home {
-    background: url('pexels-forest-trees.jpg') no-repeat center center;
+    background: url('images/des_home_page.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff; /* Ensuring text is visible on dark backgrounds, adjust as necessary */
+    color: #ff8800; /* Ensuring text is visible on dark backgrounds, adjust as necessary */
     font-size: 3rem;
+    font-family: sans-serif;
     text-align: center;
+    text-shadow: 3px 3px 3px #000;
 }
 
 .centered-text h1 {
   margin: 0; /* Removes default margin from h1 and h2 */
-  padding: 0.5vh 0; /* Adds a little vertical spacing */
   color: inherit; /* Inherits color from parent, for customization */
 }
 
