@@ -6,3 +6,4 @@ Check out the barber [DeezyClipz](https://deezyclipz.com) and schedule your hair
 ## Project Description
 The static website is hosted in an S3 bucket and the SSL certificate was validated using AWS Certifcate Manager.
 
+The domain name was registered using NameCheap.
