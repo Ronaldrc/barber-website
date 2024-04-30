@@ -2,24 +2,25 @@ body, html {
     margin: 0;
     padding: 0;
     /* scroll-behavior: smooth; */
-    font-size: 12px; /* This can be adjusted based on design requirements */
+    font-size: 12px;
 }
 
 h1 {
     font-size: 5rem;
     margin: 10px;
+    font-family: 'Goudy Old Style';
 }
 
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Change as needed */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 17px;
     color: #fff;
     position: fixed;
     width: 100%;
-    z-index: 1000; /* Ensures it's above other content */
+    z-index: 1000;
     min-height: 20px;
     max-height: 20px;
 }
@@ -28,7 +29,7 @@ h1 {
 .topbar-nav {
     overflow: hidden;
     display: flex;
-    justify-content: space-evenly; /* Ensures equal spacing */
+    justify-content: space-evenly;
     width: 60%;
     font-size: 25px;
     z-index: 100;
@@ -43,8 +44,8 @@ h1 {
     margin-left: auto;
     flex-direction: column;
     justify-content: space-around;
-    width: 3.5rem; /* 32px */
-    height: 2.5rem; /* 32px */
+    width: 3.5rem;
+    height: 2.5rem;
     background: transparent;
     border: none;
     z-index: 10;
@@ -53,7 +54,7 @@ h1 {
 .hamburger span {
     display: block;
     width: 100%;
-    height: 0.25rem; /* 4px */
+    height: 0.25rem;
     background: #ffffff;
     transition: all 0.3s linear;
 }
@@ -61,21 +62,6 @@ h1 {
 .hamburger:hover {
     color: #747474; /* Change for hover effect */
 }
-
-/* Hides the .topbar-nav on smaller screens */
-@media screen and (max-width: 768px) { /* You can adjust this value as needed */
-    .topbar-nav {
-      display: none;
-    }
-    .hamburger {
-        display: flex;
-        margin-right: auto;
-    }
-    h1 {
-        font-size: 3.5rem;
-    }
-}
-
 
 /* Styles for the topbar-nav when active (mobile view) */
 .topbar-nav.active {
@@ -112,7 +98,7 @@ h1 {
 div[id] {
     height: 100vh;
     padding: 20px;
-    border: 0px solid #ccc; /* For visual separation, can be removed */
+    border: 0px solid #ccc;
 }
 
 #home {
@@ -120,20 +106,26 @@ div[id] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    margin-left: 15%;
+    margin-right: 15%;
     /* background-attachment: fixed; */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #ff8800; /* Ensuring text is visible on dark backgrounds, adjust as necessary */
+    color: #ff8800;
     font-size: 3rem;
     font-family: sans-serif;
     text-align: center;
     text-shadow: 3px 3px 3px #000;
+
+    /* ade in background */
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
 }
 
 .centered-text h1 {
-  margin: 0; /* Removes default margin from h1 and h2 */
-  color: inherit; /* Inherits color from parent, for customization */
+  margin: 0;
+  color: inherit;
 }
 
 /* Additional styling for aesthetics */
@@ -141,31 +133,127 @@ div[id] {
   font-size: 4.2rem;
 }
 
-/* Container for the progress bar */
-.progress-container {
-    width: 4px; /* Width of the progress bar */
-    height: 50%; /* Adjusted to half the height of the viewport */
-    position: fixed; /* Stick to the right side */
-    top: 25%; /* Start from 25% from the top to center it vertically */
-    right: 10px; /* Shifted a little to the left from the right side */
-    background-color: #ccc; /* Background color */
-    z-index: 99; /* Ensure it's above other content */
-    overflow: hidden;
+#gallery {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 600px;      /* Same height as .slideshow-container */
 }
-  
-/* The actual progress bar */
-.progress-bar {
-    height: 0%; /* Initial height */
-    width: 100%; /* Full width of the container */
-    background-color: #4CAF50; /* Color of the progress bar */
+
+h2 {
+    font-family: 'Goudy Old Style';
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-family: 'Impact';
+    font-weight: 50;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust based on your preference */
+    width: 600px;  /* Match the image width */
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mySlide {
+    display: none; /* Hide images initially */
+}
+
+.slideshow-container .mySlide img {
+    width: 600px;  /* Set the width of the images */
+    height: 600px; /* Set the height of the images */
+    object-fit: cover; /* Ensures the images cover the area without distorting aspect ratio */
+}
+
+/* Put slide number in top right corner of slideshow */
+.slide-number {
+    position: absolute;
+    max-height: 30px;
+    width: 40px;
+    color: hsl(0, 100%, 50%);
+    font-weight: 1000;
+    font-size: 20px;
+    top: 5%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+}
+
+/* Style the prev & next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+#contact {
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 footer {
-    text-align: center; /* Centers text */
-    width: 100%; /* Ensures the footer spans the full width of the page */
-    padding: 20px 0; /* Adds some padding above and below the text */
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
 }
   
 .footer-content {
-    display: inline-block; /* Allows for text alignment */
+    display: inline-block;
+}
+
+/* Hides the .topbar-nav on smaller screens */
+@media screen and (max-width: 1000px) {      /*original max-width was 768px*/
+    #home {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .topbar-nav {
+      display: none;
+    }
+    .hamburger {
+        display: flex;
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
 }
