@@ -32,23 +32,48 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
 // Display topbar once the window is enlarged
 window.addEventListener('resize', function() {
   const topbarNav = document.getElementById('topbar-nav');
-  if (window.innerWidth >= 768) {   // Match the breakpoint from your CSS
+  if (window.innerWidth >= 1000) {   // Match the breakpoint from your CSS - original was >= 768
       topbarNav.classList.remove('show');   // Remove 'show' class that might have been added
       // Hide hamburger menu if it was toggled
       document.getElementById('hamburger').classList.remove('active');
   }
 });
 
-// When the user scrolls the page, execute createScrollSlider
-// window.onscroll = function() {createScrollSlider()};
+// Fade-in home page
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+      document.getElementById('home').style.opacity = 1;
+  }, 0); // Delay in ms before the function is run
+});
 
-// function createScrollSlider() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   document.getElementById("myBar").style.height = scrolled + "%";
-// }
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlide");
+  var totalSlides = slides.length; // Get the total number of slides
+  var slideNumberText = document.getElementById("slide-number");
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+  // Update the text with current slide number
+  slideNumberText.innerHTML = slideIndex + ' / ' + totalSlides;
+}
+
