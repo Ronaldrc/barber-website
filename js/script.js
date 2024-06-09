@@ -49,31 +49,37 @@ document.addEventListener('DOMContentLoaded', function() {
   }, 0); // Delay in ms before the function is run
 });
 
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
 
-var slideIndex = 1;
-showSlides(slideIndex);
+
+var slideIndex = 0;
+var slides = document.getElementsByClassName("mySlide");
+var totalSlides = slides.length; // Get the total number of slides
+var slideInterval = setInterval(function() { plusSlides(1); }, 5000); // Change slide every 3000 milliseconds
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  clearInterval(slideInterval); // Clear the current interval
+  slideIndex += n;
+  if (slideIndex > totalSlides - 1) { slideIndex = 0; }
+  if (slideIndex < 0) { slideIndex = totalSlides - 1; }
+  showSlides();
+  slideInterval = setInterval(function() { plusSlides(1); }, 5000); // Restart the interval
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
+function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("mySlide");
-  var totalSlides = slides.length; // Get the total number of slides
   var slideNumberText = document.getElementById("slide-number");
-
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-  for (i = 0; i < slides.length; i++) {
+  for (i = 0; i < totalSlides; i++) {
       slides[i].style.display = "none";  
   }
-  slides[slideIndex-1].style.display = "block";  
-  // Update the text with current slide number
-  slideNumberText.innerHTML = slideIndex + ' / ' + totalSlides;
+  slides[slideIndex].style.display = "block";
+  // Update the text with the current slide number
+  slideNumberText.innerHTML = (slideIndex + 1) + ' / ' + totalSlides;
 }
 
+// Initial call to display the first slide
+showSlides();
