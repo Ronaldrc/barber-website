@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     /* scroll-behavior: smooth; */
     font-size: 12px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -63,6 +64,12 @@ h1 {
     color: #747474; /* Change for hover effect */
 }
 
+.hamburger.active {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
 /* Styles for the topbar-nav when active (mobile view) */
 .topbar-nav.active {
     display: flex;
@@ -71,12 +78,10 @@ h1 {
 }
 
 .topbar-nav.show {
-    display: flex;
-    flex-direction: column;
-}
 
-.hamburger.active div {
-    transform: rotate(45deg);
+    display: flex;
+    /* flex-direction: column;
+    margin-top: 60%; */
 }
 
 .logo img {
@@ -102,7 +107,7 @@ div[id] {
 }
 
 #home {
-    background: url('images/des_home_page.jpg') no-repeat center center;
+    background-image: url('images/des_home_page.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -116,11 +121,27 @@ div[id] {
     font-size: 3rem;
     font-family: sans-serif;
     text-align: center;
-    text-shadow: 3px 3px 3px #000;
+    text-shadow: 3px 3px 3px #353535;
 
-    /* ade in background */
+    /* fade in background */
     opacity: 0;
     transition: opacity 1.5s ease-in;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15%; /* Offset by the same amount as the margin */
+    right: -15%; /* Offset by the same amount as the margin */
+    bottom: 0;
+    background-color: #2e2e2e;
+    z-index: -1; /* Ensure this is behind the main element */
+    bottom: -10%; /*  Ensure background color extends to bottom */
+}
+
+#about {
+    background-color: #ebebeb;
 }
 
 .centered-text h1 {
@@ -134,11 +155,17 @@ div[id] {
 }
 
 #gallery {
+    background-color: #ebebeb;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 150px;
     padding-left: 0px;
     padding-right: 0px;
-    height: 600px;      /* Same height as .slideshow-container */
+    height: 500px;      /* Same height as .slideshow-container */
+}
+
+.gallery-list {
+    display: inline-block;
+    columns: 3;
 }
 
 h2 {
@@ -155,8 +182,9 @@ h3 {
 
 .slideshow-container {
     position: relative;
-    max-width: 600px; /* Adjust based on your preference */
-    width: 600px;  /* Match the image width */
+    max-width: 500px; /* Adjust based on your preference */
+    width: 500px;  /* Match the image width */
+    height: 500px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -170,9 +198,11 @@ h3 {
 }
 
 .slideshow-container .mySlide img {
-    width: 600px;  /* Set the width of the images */
-    height: 600px; /* Set the height of the images */
-    object-fit: cover; /* Ensures the images cover the area without distorting aspect ratio */
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+
 }
 
 /* Put slide number in top right corner of slideshow */
@@ -219,15 +249,21 @@ h3 {
 }
 
 #contact {
-    
+
 }
 
 ul {
     list-style-type: none;
+    padding: 0;
+    columns: 1;
 }
 
 li {
+    display: flex;
     list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
 }
 
 footer {
@@ -255,5 +291,16 @@ footer {
     }
     h1 {
         font-size: 3.5rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+    #gallery {
+        height: 350px;
+        padding-bottom: 100px;
+    }
+    .slideshow-container {
+        width: 300px;
+        height: 300px;
     }
 }
