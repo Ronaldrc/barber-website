@@ -130,10 +130,6 @@ div[id] {
     /* Empty */
 }
 
-#about {
-    background-color: #ebebeb;
-}
-
 .centered-text h1 {
   margin: 0;
   color: inherit;
@@ -144,12 +140,7 @@ div[id] {
   font-size: 4.2rem;
 }
 
-#services {
-    /* Empty */
-}
-
 #gallery {
-    background-color: #ebebeb;
     padding-top: 0px;
     padding-bottom: 150px;
     padding-left: 0px;
@@ -181,9 +172,9 @@ a {
 
 .slideshow-container {
     position: relative;
-    max-width: 500px; /* Adjust based on your preference */
+    max-width: 500px;
     width: 500px;  /* Match the image width */
-    height: 500px;
+    height: 500px;  /* Match the image width */
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -197,11 +188,10 @@ a {
 }
 
 .slideshow-container .mySlide img {
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     object-fit: cover;
     object-position: center;
-
 }
 
 /* Put slide number in top right corner of slideshow */
@@ -248,7 +238,7 @@ a {
 }
 
 #contact {
-
+    background-color: #ebebeb;
 }
 
 ul {
@@ -304,5 +294,9 @@ footer {
     .slideshow-container {
         width: 300px;
         height: 300px;
+    }
+    .image1 {
+        margin-top: -100px;
+        margin-left: -200px;
     }
 }
