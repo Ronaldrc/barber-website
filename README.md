@@ -9,3 +9,6 @@ The static website is hosted in an S3 bucket and Amazon CloudFront is used to se
 A SSL certificate was validated using AWS Certifcate Manager for the domain.
 
 The domain name was registered using NameCheap.
+
+## Demo
+![alt text](./images/demo_home_page.png)
