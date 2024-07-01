@@ -81,5 +81,17 @@ function showSlides() {
   slideNumberText.innerHTML = (slideIndex + 1) + ' / ' + totalSlides;
 }
 
+// Treat entire instagram class as hyperlink using event listener
+var instagram = document.querySelectorAll('.instagram');
+instagram[0].addEventListener("click", function() {
+  location.href = "https://instagram.com/deezy.clipz";
+})
+
+// Treat entire book-with-me class as hyperlink using event listener
+var instagram = document.querySelectorAll('.book-with-me');
+instagram[0].addEventListener("click", function() {
+  location.href = "https://www.arthenticcuts.com/booking";
+})
+
 // Initial call to display the first slide
 showSlides();
