@@ -196,7 +196,7 @@ h3 {
 .slide-number {
     position: absolute;
     max-height: 30px;
-    width: 40px;
+    width: 70px;
     color: hsl(0, 100%, 50%);
     font-weight: 1000;
     font-size: 20px;
@@ -303,6 +303,10 @@ li.links {
     .slideshow-container {
         width: 300px;
         height: 300px;
+    }
+    .slide-number {
+        top: 6%;
+        left: 93%;
     }
 }
 
