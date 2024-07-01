@@ -262,7 +262,16 @@ footer {
 }
   
 .footer-content {
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 2rem;
+    padding: 0;
+}
+
+li.links {
+    display: list-item;
+    margin: 0px 10px;
 }
 
 /* Hides the .topbar-nav on smaller screens */
@@ -297,12 +306,57 @@ footer {
     }
 }
 
-/* Add hover effect to instagram icon */
-img.instagram-link:hover {
-    transform: scale(1.05);
+.instagram {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
 }
 
-/* Add hover effect to hyperlink icon */
+.instagram:hover {
+    transform: scale(1.05);
+    font-size: 105%;
+    text-align: center;
+}
+
+.book-with-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border: black;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.book-with-me:hover {
+    transform: scale(1.05);
+    font-size: 105%;
+    text-align: center;
+}
+
+/* Add hover effect for general booking links */
+a.book-link {
+    color: #ff8800;
+}
+
 a.book-link:hover {
+    color: #ff9925;
+    font-size: 105%;
+}
+
+/* Add hover effect to footer links */
+a.links{
+    color: black;
+}
+
+a.links:hover {
+    color: rgb(78, 78, 78);
     font-size: 105%;
 }
