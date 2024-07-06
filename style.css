@@ -100,10 +100,11 @@ h1 {
 }
 
 /* Sections styling */
-div[id] {
+div[id="home"] {
     height: 100vh;
     padding: 20px;
     border: 0px solid #ccc;
+    margin: 0px;
 }
 
 #home {
@@ -142,6 +143,11 @@ div[id] {
     padding-left: 0px;
     padding-right: 0px;
     height: 500px;      /* Same height as .slideshow-container */
+}
+
+h2.gallery {
+    margin: 0px;
+    padding: 1rem;
 }
 
 .gallery-list {
@@ -236,8 +242,14 @@ h3 {
 }
 
 #contact {
+    position: relative;
     background-color: #d4d4d4;
-    margin-top: 0px;
+    padding-bottom: 1rem;
+}
+
+h2.contact {
+    margin: 0px;
+    padding: 1rem;
 }
 
 ul {
@@ -255,10 +267,11 @@ li {
 }
 
 footer {
+    position: relative;
     background-color: #d4d4d4;
     text-align: center;
     width: 100%;
-    padding: 20px 0;
+    padding: 1rem 0;
 }
   
 .footer-content {
@@ -308,6 +321,10 @@ li.links {
         top: 6%;
         left: 93%;
     }
+    iframe {
+        border: 100px;
+        width: auto;
+    }
 }
 
 .instagram {
@@ -319,6 +336,7 @@ li.links {
     border-style: solid;
     border-width: 1px;
     padding: 10px;
+    margin: 10px;
 }
 
 .instagram:hover {
@@ -363,4 +381,9 @@ a.links{
 a.links:hover {
     color: rgb(78, 78, 78);
     font-size: 105%;
+}
+
+h3.footer {
+    font-size: 2rem;
+    margin: 1rem;
 }
