@@ -101,7 +101,7 @@ h1 {
 
 /* Sections styling */
 div[id="home"] {
-    height: 100vh;
+    height: 100svh;
     padding: 20px;
     border: 0px solid #ccc;
     margin: 0px;
