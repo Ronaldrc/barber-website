@@ -101,7 +101,7 @@ h1 {
 
 /* Sections styling */
 div[id="home"] {
-    height: 100vh;
+    height: 100svh;
     padding: 20px;
     border: 0px solid #ccc;
     margin: 0px;
@@ -138,11 +138,14 @@ div[id="home"] {
 }
 
 #gallery {
-    background-color: #c2c2c2;
-    padding-bottom: 150px;
+    /* background-color: #c2c2c2; */
+    background-color: rgb(50, 50, 50);
+    padding-bottom: 100px;
     padding-left: 0px;
     padding-right: 0px;
+    padding-top: 30px;
     height: 500px;      /* Same height as .slideshow-container */
+    color: rgb(246, 247, 249);
 }
 
 h2.gallery {
@@ -242,8 +245,10 @@ h3 {
 }
 
 #contact {
+    /* background-color: #d4d4d4; */
+    background-color: rgb(54, 54, 54);
     position: relative;
-    background-color: #d4d4d4;
+    color: rgb(246, 247, 249);
     padding-bottom: 1rem;
 }
 
@@ -267,8 +272,9 @@ li {
 }
 
 footer {
+    /* background-color: #d4d4d4; */
+    background-color: rgb(54, 54, 54);
     position: relative;
-    background-color: #d4d4d4;
     text-align: center;
     width: 100%;
     padding: 1rem 0;
@@ -311,7 +317,7 @@ li.links {
     }
     #gallery {
         height: 350px;
-        padding-bottom: 100px;
+        padding-bottom: 80px;
     }
     .slideshow-container {
         width: 300px;
@@ -332,7 +338,8 @@ li.links {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border: black;
+    /* border: black; */
+    border: white;
     border-style: solid;
     border-width: 1px;
     padding: 10px;
@@ -350,7 +357,8 @@ li.links {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    border: black;
+    /* border: black; */
+    border: white;
     border-style: solid;
     border-width: 1px;
     padding: 10px;
@@ -375,15 +383,18 @@ a.book-link:hover {
 
 /* Add hover effect to footer links */
 a.links{
-    color: black;
+    /* color: black; */
+    color: rgb(246, 247, 249);
 }
 
 a.links:hover {
-    color: rgb(78, 78, 78);
+    /* color: rgb(78, 78, 78); */
+    color: rgb(246, 247, 249);
     font-size: 105%;
 }
 
 h3.footer {
+    color: rgb(246, 247, 249);
     font-size: 2rem;
     margin: 1rem;
 }
